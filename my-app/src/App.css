@@ -1,0 +1,90 @@
+/* Общие стили */
+body {
+    font-family: sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    box-sizing: border-box; /* Расчет ширины и высоты с учетом padding и border */
+}
+
+/* Стили заголовка */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Стили списка заметок */
+.notes-list {
+    list-style: none;
+    padding: 0;
+}
+
+.note {
+    
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.note-text {
+    flex-grow: 1;
+}
+
+.note-checkbox {
+    cursor: pointer;
+}
+
+.note-checkbox:checked + .note-text {
+    text-decoration: line-through;
+}
+
+/* Стили формы добавления */
+.add-note-form {
+    margin-top: 20px;
+}
+
+.add-note-form input,
+.add-note-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Расчет ширины и высоты с учетом padding и border */
+}
+
+.add-note-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Занимать всю доступную ширину */
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    #app {
+        padding: 10px;
+    }
+
+    .note {
+        flex-direction: column;
+    }
+
+    .note-checkbox {
+        margin-bottom: 10px;
+    }
+}
