@@ -1,10 +1,11 @@
-/* Общие стили */
 body {
     font-family: sans-serif;
     background-color: #fff;
     color: #333;
     margin: 0;
     padding: 0;
+    height:100%;
+    width: 100%;
 }
 
 #app {
@@ -12,17 +13,13 @@ body {
     margin: 0 auto;
     padding: 20px;
     background-color: #f8f8f8;
-    box-sizing: border-box; /* Расчет ширины и высоты с учетом padding и border */
+    box-sizing: border-box; 
 }
-
-/* Стили заголовка */
 h1 {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
 }
-
-/* Стили списка заметок */
 .notes-list {
     list-style: none;
     padding: 0;
@@ -51,10 +48,10 @@ h1 {
     text-decoration: line-through;
 }
 
-/* Стили формы добавления */
 .add-note-form {
     margin-top: 20px;
 }
+
 
 .add-note-form input,
 .add-note-form textarea {
@@ -62,7 +59,7 @@ h1 {
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
-    box-sizing: border-box; /* Расчет ширины и высоты с учетом padding и border */
+    box-sizing: border-box; 
 }
 
 .add-note-form button {
@@ -71,20 +68,39 @@ h1 {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    width: 100%; /* Занимать всю доступную ширину */
+    
 }
 
-/* Адаптивный дизайн */
-@media (max-width: 768px) {
+@media (max-width: 432px) {
     #app {
         padding: 10px;
     }
 
+    h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
     .note {
         flex-direction: column;
+        padding: 10px;
+    }
+
+    .note-text {
+        margin-top: 10px;
     }
 
     .note-checkbox {
         margin-bottom: 10px;
     }
+
+    .add-note-form input,
+    .add-note-form textarea {
+        padding: 6px;
+    }
+
+    .add-note-form button {
+        padding: 8px 16px;
+    }
 }
+

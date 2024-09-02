@@ -6,20 +6,20 @@ function App() {
   const [notes, setNotes] = useState([]);
   const [newNoteText, setNewNoteText] = useState('');
 
-  const addNote = (event) => {
+  function addNote(event) {
     event.preventDefault();
 
     if (newNoteText.trim()) {
-      const newNote = {
-        id: Date.now(),
-        text: newNoteText,
-       
-      };
+        const newNote = {
+            id: Date.now(),
+            text: newNoteText,
+        };
 
-      setNotes([...notes, newNote]);
-      setNewNoteText('');
+        setNotes([...notes, newNote]);
+        setNewNoteText('');
     }
-  };
+}
+
 
   const toggleNoteCompletion = (id) => {
     setNotes(
